@@ -1,0 +1,353 @@
+a:link{text-decoration: none; color:#688A65}
+a:visited{text-decoration: none; color: #688A65}
+a:hover{text-decoration: underline; color: #FEA604}
+a:active{text-decoration: none; color: #54834F}
+
+BODY {
+	SCROLLBAR-FACE-COLOR: #FFFFFF;
+	SCROLLBAR-HIGHLIGHT-COLOR: #B2D1E0; 
+	SCROLLBAR-SHADOW-COLOR: #ffffff; 
+	COLOR: #333333; 
+	SCROLLBAR-3DLIGHT-COLOR: #999999; 
+	SCROLLBAR-ARROW-COLOR: #A58E9C; 
+	SCROLLBAR-TRACK-COLOR: #A58E9C;
+	margin-top:0px;
+	font-family:Sans-serif;
+	font-size:9px;	
+
+}
+
+#main_table
+	{
+	width: 100%;
+	height: 100%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000;
+	
+	font-family:Sans-serif;
+	font-size:9px;
+	font-weight:normal;
+
+	}
+/*Titulos para los listados*/
+#main_title
+	{
+	height: 25px;
+	/*background-image: url('http://www.cobragestion.com.ar/images/fondo_botonera.gif'); */
+	background-repeat: repeat-x;
+	text-align: center;
+	font-family: "verdana";
+	font-weight: normal;
+	font-size: 16px;
+	color: #003063;
+	background-color: #B5D3E7;
+}
+
+/*fin de titulos para los listados*/
+.barra_titulo
+	{
+	border-style: solid;
+	border-width: 1px 0px;
+	border-color: #000;
+	font-family: Courier New;
+	font-size: 12px;
+	color: #00f;
+	text-align: left;
+	background-color: #fff;
+	padding: 0px 0px 0px 2px;
+	margin: 10px 0px 0px 0px;
+	}
+.barra_item
+	{
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: bold;
+	background-color: #e0e0e0;
+	margin: 0px 0px 1px 5px;
+	}
+.barra_item, .barra_item a, .barra_item a:link, .barra_item a:visited, .barra_item a:active
+	{
+	text-decoration: none;
+	display: block;
+	color: #000;
+	}
+.barra_item a:hover
+	{
+	background-color: #fff;
+	}
+
+#content_cell
+	{
+	padding: 5px;
+	}
+
+div#login
+	{
+	width: 100%;
+	height: 20px;
+	margin: 10px 1px;
+	background-image: url('http://www.cobragestion.com.ar/images/bg_login.gif');
+	background-color: #010066;
+	background-repeat: no-repeat;
+	text-align: left;
+	}
+div#login .input_field
+	{
+	position: relative;
+	left: 30px;
+	top: 4px;
+	width: 80px;
+	height: 8px;
+	background-color: #C0C0C0;
+	color: #000;
+	border-width: 0px;
+	}
+div#login .submit_image
+	{
+	position: relative;
+	left: 40px;
+	top: 4px;
+	}
+
+.input_field
+	{
+	height: 14px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #CCC;
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000;
+	background-color: #fff;
+	}
+
+.normal_button
+	{
+	border-width: 1px;
+	background-color:#006699;
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	color: #fff;
+	width: 20px
+	}
+.normal_text
+	{
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000;
+	}
+.light_text
+	{
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: light;
+	color: #000;
+	}
+
+.normal_data
+	{
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: bold;
+	color: #00f;
+	}
+.light_data
+	{
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: light;
+	color: #00f;
+	}
+
+a.normal_link, a.normal_link:link, a.normal_link:active, a.normal_link:visited
+	{
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: bold;
+	color: #069;
+	text-decoration: none;
+	}
+a.light_link, a.light_link:link, a.light_link:active, a.light_link:visited
+	{
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: lighter;
+	color: #069;
+	text-decoration: none;
+	}
+a.normal_link:hover, a.light_link:hover
+	{
+	color: #00f;
+	text-decoration: underline;
+	}
+
+a.go_back, a.go_back:active, a.go_back:visited, a.go_back:link
+	{
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	font-weight: bold;
+	color: #f00;
+	text-decoration: none;
+	}
+a.go_back:hover
+	{
+	color: #00f;
+	}
+
+#normal_table
+	{
+	width: 100%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ccc;
+	background-color: #F4F4F4;
+	font-family: "Sans-serif";
+	font-size:10px;
+
+	}
+#normal_table th
+	{
+	height: 21px;
+	background-image: url('http://www.cobragestion.com.ar/images/header_background.gif');
+	background-repeat: repeat-x;
+	font-family: "Verdana";
+	font-size: x-small;
+	color: #000;
+	background-color: #010066;
+}
+#normal_table td
+	{
+	padding: 2px 5px;
+	}
+
+#error_message
+	{
+	font-family: Courier New;
+	font-size: 20px;
+	font-weight: bold;
+	color: #f00;
+	background-color: #ffa;
+	text-align: center;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #000;
+	padding: 5px;
+	}
+
+#ok_message
+	{
+	font-family: Courier New;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #69c;
+	text-align: center;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #000;
+	padding: 5px;
+	}
+	
+#navigation_bar_table
+	{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000 #fff #fff #000;
+	width: 100%;
+	height: 20px;
+	}
+#navigation_bar_table td
+	{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000 #fff #fff #000;
+	font-family: Verdana, Arial;
+	font-size: 9px;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	background-color: #aaa;
+	}
+#navigation_bar_table td.arrow
+	{
+	width: 15px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #fff #000 #000 #fff;
+	background-color: #fff;
+	}
+
+#navigation_bar_table a, #navigation_bar_table a:link, #navigation_bar_table a:active, #navigation_bar_table a:visited
+	{
+	color: #f00;
+	text-decoration: none;
+	}
+#navigation_bar_table a:hover
+	{
+	color: #ff0;
+
+	}
+	
+img.thumbnail
+	{
+	border-style: none;
+	width: 100px;
+	}
+	
+.input_text
+	{
+	/*height: 18px;
+	border-style: solid;*/
+	border-width: 1px;
+	border-color: #cccccc;
+	font-family: Verdana, Arial;
+	font-size: 10 px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+
+.td_claro{
+	background-color: #7d9f7a;
+	color: #000000;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+.td_masclaro{
+	background-color: #EBF2EA;
+	text-align:center;
+	color: #000000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+/* Celdas gris oscuro */
+.td_oscuro{
+	text-align:center;
+	background-color: #558551;
+	color: #FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+.table_normal{
+	background-color: #ffffff;
+	color: #000000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+hr{
+	color:#333333
+}
+
+
+#left_bar{
+	background-color: #F4F4F4;
+}
