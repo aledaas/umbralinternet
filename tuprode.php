@@ -4,7 +4,7 @@ include ("system/conexion.php");
 include ("system/admin_user.class.php");
 $db=Conectar();
 
-require 'admin/facebook-php-sdk-master/src/facebook.php';
+require 'system/facebook-php-sdk-master/src/facebook.php';
 
 
 $facebook = new Facebook(array(
@@ -40,7 +40,7 @@ if ($user) {
 
 
 
-$usuario=$_SESSION['id_usuario'];
+$usuario=$user_profile['id'];
 $fecha=date("Y-m-d",time());
 $hora=date(H);
 $minuto=date(i);
@@ -85,7 +85,7 @@ $horaminuto2=$hora2.":".$minuto;
 	color: #000000;
 	}
 </style>
- <pre><?php print_r($user_profile['id']); ?></pre>
+ <!--<pre><?php //print_r($user_profile['id']); ?></pre> -->
 
 <form action="" method="post">
 <?php
@@ -227,7 +227,7 @@ function traer_equipo_1($equipo)
 	$sql1 = "select equipo, escudo from equipos where id_equipo = ".$equipo ;
 	$result1 = mysql_query($sql1);
 	$row1 = mysql_fetch_array($result1);
-	$equipo = '<img src="images/'.$row1['escudo'].'" >&nbsp;&nbsp;'.$row1['equipo'];
+	$equipo = '<img src="images/'.$row1['escudo'].'" style="width:35px;" >&nbsp;&nbsp;'.$row1['equipo'];
 	return $equipo;
 }
 function traer_equipo_2($equipo)
@@ -236,7 +236,7 @@ function traer_equipo_2($equipo)
 	$sql_2 = "select equipo, escudo from equipos where id_equipo = ".$equipo ;
 	$result_2 = mysql_query($sql_2);
 	$row_2 = mysql_fetch_array($result_2);
-	$equipo = $row_2['equipo'].'&nbsp;&nbsp;<img src="images/'.$row_2['escudo'].'" >';
+	$equipo = $row_2['equipo'].'&nbsp;&nbsp;<img src="images/'.$row_2['escudo'].'" style="width:35px;" >';
 	return $equipo;
 }
 ?>
