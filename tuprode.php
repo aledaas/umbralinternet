@@ -84,9 +84,18 @@ $horaminuto2=$hora2.":".$minuto;
 	background: #FFFFFF;
 	color: #000000;
 	}
-</style>
- <!--<pre><?php //print_r($user_profile['id']); ?></pre> -->
+.button{
+	font:normal 11px Arial, tahoma, verdana;
+	color: #333;
+	height: 16px;
 
+}	
+</style>
+ <pre><?php //print_r($user_profile['id']); ?></pre> 
+ <?php
+ 	//	$name = $user_profile['name'];
+	//	echo "<img src='https://graph.facebook.com/".$user."/picture'>". $name;
+?>						
 <form action="" method="post">
 <?php
 
@@ -96,8 +105,8 @@ echo '
     <tr>
     <td width="40%" valign="top">
 ';
-echo '<table cellpadding="3" cellspacing="1" style="background-color:#666666; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px">
-		<tr style="background-color:#000000; color:#f8f8f8; " align="center">
+echo '<table cellpadding="3" cellspacing="1" style="background-color:#94a8c3; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px">
+		<tr style="background-color:#d0e0f2; color:#082651; " align="center">
 		
 	
 			<td>fecha</td>
@@ -192,8 +201,8 @@ echo '<table cellpadding="3" cellspacing="1" style="background-color:#666666; fo
 		echo '</td><td>';
 		echo '<input name="partido[]" id="'.$row['id_partido'].'" type="hidden" size="1" maxlength="2" value= '.$row['id_partido'].' />';
 
-		//if( ($fecha >= $row['fecha'])  )
-                if( ($row['estado']) == 'C' )    
+		if( ($fecha >= $row['fecha'])  )
+            //    if( ($row['estado']) == 'C' )    
 		{
 			echo '<input name="goleq01[]" id="'.$row['id_partido'].'" type="text" size="1" maxlength="2" value= '.$row['golequipo01'].' class="input_desactivo" readonly="readonly" />';
 			echo '</td><td>';
@@ -215,7 +224,7 @@ echo '<table cellpadding="3" cellspacing="1" style="background-color:#666666; fo
 	} 
 	
 	echo '</td><tr>';
-	echo '<td colspan="8"> <input type="submit" value="Guardar Prode" class="button" name="submit" / <td></tr>';
+	echo '<td colspan="8"> <input type="submit" value="Guarda TuProde" class="button" name="submit" / <td></tr>';
 	
 	echo '</table>';
 	echo '</form';

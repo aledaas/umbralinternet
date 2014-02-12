@@ -1,6 +1,7 @@
 <?PHP
-include('system/conexion.php');
-$db=Conectar();
+session_start ();
+//include('system/conexion.php');
+//$db=Conectar();
 ?>
 <style type="text/css">
 <!--
@@ -20,7 +21,7 @@ $db=Conectar();
 -->
 </td>
     <td width="30%" height="651" valign="middle" align="center"><p>&nbsp;</p>
-      <p><!--<img src="images/logo_grande.jpg"  />--></p>
+      <pre><?php print_r($facebook->api('/me')); ?></pre>
       <p class="Estilo1"></p>
 <p>
 <h1>

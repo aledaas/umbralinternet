@@ -29,17 +29,15 @@ function add_fb ( $id,$username,$email,$fr_name,$ls_name,$fb_location_id,$fb_loc
 		{
 			db_connect();
 
-			$query = "select email, id_usuario_face from {$this->mysql_table} where email='$email' and id_usuario_face = '$id' ";
-			$result = mysql_query ($query);
+			$query_select = "select email, id_usuario from {$this->mysql_table} where id_usuario = '$id' ";
+			$result = mysql_query ($query_select);
 			if ($row = mysql_fetch_array($result))
 				{
-				$GLOBALS["error"] = "El email: ".$row["email"]." ya es usuario";
+				$GLOBALS["select"] = "El email: ".$row["email"]." ya es usuario";
 				return false;
 				}else{
-					$GLOBALS["error"] = "El email: ".$row["email"]." no es usuario";
+					$GLOBALS["select"] = "El email: ".$query_select." no es usuario";
 				}
-				
-			mysql_query ("lock tables {$this->mysql_table} write");
 			
 			$date = date ("Y-m-d");
 			$id_grupo = 3;
@@ -50,18 +48,16 @@ function add_fb ( $id,$username,$email,$fr_name,$ls_name,$fb_location_id,$fb_loc
 
 			
 			$query = "insert into {$this->mysql_table} (
-						id_usuario_face,usuario,pass,email,id_grupo,perfil,referidopor,activo,nombre,apellido, provincia, fb_location_id, fb_location_name, sexo
+						id_usuario, id_usuario_face,usuario,pass,email,id_grupo,perfil,referidopor,activo,nombre,apellido, provincia, fb_location_id, fb_location_name, sexo
 				) values (
-						'$id', '$username','$username','$email','$id_grupo','$perfil','$referidopor','$activo','$fr_name','$ls_name','$provincia', '$fb_location_id', '$fb_location_name', '$gender'
+						'$id','$id', '$username','$username','$email','$id_grupo','$perfil','$referidopor','$activo','$fr_name','$ls_name','$provincia', '$fb_location_id', '$fb_location_name', '$gender'
 				)";
 			if (mysql_query ($query))
 				{
-				mysql_query ("unlock tables");
-				$GLOBALS["error"] = "Nuevo usuario";
+				$GLOBALS["error"] = $query."Nuevo usuario";
 				return true;
 				}
-			mysql_query ("unlock tables");
-			$GLOBALS["error"] = "No se ha podido agregar el registro";
+			$GLOBALS["error"] = $query."No se ha podido agregar el registro";
 			return false; 
 		}
 

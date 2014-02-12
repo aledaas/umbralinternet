@@ -14,7 +14,7 @@ $db = ADONewConnection($driver); # ej. 'mysql' o 'oci8'
 $server='localhost';
 $user='root';
 $password='host789mysql';
-$database='prode_main';
+$database='tuprode';
 
 //$server='latinme1.mydomaincommysql.com';
 //$user='prodes_me';

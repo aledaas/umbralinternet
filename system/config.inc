@@ -8,5 +8,5 @@
 $mysql_host = "localhost";
 $mysql_user = "root";
 $mysql_pwd = "host789mysql";
-$mysql_db = "prode_main";
+$mysql_db = "tuprode";
 ?>

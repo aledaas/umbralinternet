@@ -7,10 +7,10 @@ $actual = $_SESSION["session_nivel"];
 	$mysql_user = "root";
 	$mysql_pwd = ""; */
 //conexion web
-	$mysql_host = "localhost";
+	$mysql_host = "latinme1.mydomaincommysql.com";
 	$mysql_db = "cobragestion";
-	$mysql_user = "cbrgestion";
-	$mysql_pwd = "cbrred08"; 
+	$mysql_user = "cobragestion";
+	$mysql_pwd = "c5br1g2st35n"; 
 
 
 function db_connect (){
