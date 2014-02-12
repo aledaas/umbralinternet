@@ -41,6 +41,7 @@ if ($user) {
 
 
 $usuario=$user_profile['id'];
+//$usuario='1175830146'; //usuario de aledaas para probar
 $fecha=date("Y-m-d",time());
 $hora=date(H);
 $minuto=date(i);
@@ -48,10 +49,6 @@ $ronda = $_GET['ronda'];
 $torneo = $_GET['torneo'];
 $hora2=date(H);
 $horaminuto2=$hora2.":".$minuto;
-
-
-//$admin_user = new admin_user;
-//if (!$admin_user->active ()) header ("Location: system/logout.php");
 
 ?>
 <style>
@@ -93,8 +90,6 @@ $horaminuto2=$hora2.":".$minuto;
 </style>
  <pre><?php //print_r($user_profile['id']); ?></pre> 
  <?php
- 	//	$name = $user_profile['name'];
-	//	echo "<img src='https://graph.facebook.com/".$user."/picture'>". $name;
 ?>						
 <form action="" method="post">
 <?php
@@ -119,12 +114,12 @@ echo '<table cellpadding="3" cellspacing="1" style="background-color:#94a8c3; fo
 		
 
 	$sql_mi_prode = "select distinct id_prode from prodes where id_usuario = ".$usuario." and ronda=".$ronda." and torneo= ".$torneo." ";
-        //print($sql_mi_prode);die;
+
 	$result_mi_prode = mysql_query($sql_mi_prode);
 	
         while ($result_tuprode = mysql_fetch_array($result_mi_prode))
 	{
-//	echo "Tu prode es el Nro:".$result_tuprode['id_prode']." escribe cada resultado y luego presiona la tecla ENTER para almacenar los cambios, SUERTE !!!<br>";
+
         $id_miprode = $result_tuprode['id_prode'];
         }
 
@@ -166,9 +161,9 @@ echo '<table cellpadding="3" cellspacing="1" style="background-color:#94a8c3; fo
 				{
 					$sql_guarda_prode = "update prodes set golequipo01=".$mi_goleq01[$c].",  
 										 golequipo02=".$mi_goleq02[$c].", 
+										 estado = 'C', 
 										 fecha='".$new_fecha."',hora='".$new_horaminuto."'  
 										 where id_prode = ".$id_miprode." and id_partido = $v ";
-					//echo $sql_guarda_prode;
                                             if($result_tuprode['id_prode']==10)
 					{
 						echo $sql_guarda_prode. "<br>";
@@ -187,8 +182,8 @@ echo '<table cellpadding="3" cellspacing="1" style="background-color:#94a8c3; fo
 	and pp.id_usuario = ". $usuario." 
 	and pp.ronda in ('". $ronda."')
         and pp.torneo in('".$torneo."')    
-	order by p.fecha";
-	//echo $sql_tuprode."<br>";
+	order by p.fecha, p.hora";
+
 	$result = mysql_query($sql_tuprode);
 	while ($row = mysql_fetch_array($result))
 	{
@@ -201,8 +196,7 @@ echo '<table cellpadding="3" cellspacing="1" style="background-color:#94a8c3; fo
 		echo '</td><td>';
 		echo '<input name="partido[]" id="'.$row['id_partido'].'" type="hidden" size="1" maxlength="2" value= '.$row['id_partido'].' />';
 
-		if( ($fecha >= $row['fecha'])  )
-            //    if( ($row['estado']) == 'C' )    
+		if( ($fecha >= $row['fecha'] || $row['estado'] == 'C')  )
 		{
 			echo '<input name="goleq01[]" id="'.$row['id_partido'].'" type="text" size="1" maxlength="2" value= '.$row['golequipo01'].' class="input_desactivo" readonly="readonly" />';
 			echo '</td><td>';
